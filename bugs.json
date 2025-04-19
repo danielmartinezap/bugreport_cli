@@ -1,0 +1,9 @@
+[
+    {
+        "timestamp": "2025-04-18T20:36:17.591678",
+        "image_tested": "tests/bug3.png",
+        "classification": "1. **Tipo de Bug: Layout**\n   - **Elementos afectados:** \n     - Logo del blog en la cabecera\n     - Texto del logo de la cabecera\n   - **Severidad:** 4\n\n2. **Tipo de Bug: Contenido**\n   - **Elementos afectados:** \n     - Texto del logo en la cabecera, que ha sido alterado a \"BADADASDASDASDSD\"\n   - **Severidad:** 5\n\n3. **Tipo de Bug: Color**\n   - **Elementos afectados:** \n     - Fondo de la secci\u00f3n \"Follow Blog Via Email\" y otros elementos interactivos ha cambiado a un color m\u00e1s oscuro\n   - **Severidad:** 3\n\nEstos bugs afectan tanto la est\u00e9tica general del sitio como la legibilidad y usabilidad del mismo, especialmente el cambio de texto en el logo, que podr\u00eda confundir o desorientar a los usuarios.",
+        "affected_area": "\u00c1rea no especificada",
+        "diff_image": "diff_visual.png"
+    }
+]
