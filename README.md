@@ -1,3 +1,123 @@
+# VisualGuard QA 🛡️🔍  
+**AI-Powered Visual Testing Tool · Catch UI bugs before your users do**
+
+## 🚀 Overview  
+VisualGuard QA is a CLI tool that combines Computer Vision + AI to detect and classify visual bugs in web interfaces. It compares screenshots against a reference baseline and generates detailed reports with:
+
+- Visual differences (pixels, layout, colors)  
+- Semantic bug classification using AI (e.g., “Button is invisible due to poor contrast”)  
+- HTML/PDF reports  
+- Ideal for QA automation, developers, and designers who need automated, human-readable visual testing.
+
+# 🌟 Features  
+- ✅ **Accurate Detection**: Uses OpenCV + SSIM to compare images  
+- 🤖 **AI-Powered Classification**: GPT-4 Vision analyzes bug context  
+- 📊 **Automated Reports**: Generates HTML reports with severity-based bug sorting  
+- 🔧 **100% Local**: Keeps your images private—no cloud upload  
+- 🐍 **Python-Based**: Easy to integrate into CI/CD pipelines
+
+# 📦 Installation  
+Clone the repository:
+
+```bash
+git clone https://github.com/danielmartinezap/VisualGuard-QA.git
+cd VisualGuard-QA
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+# (Optional) Set your OpenAI API key for AI classification
+export OPENAI_API_KEY="your-key-here"
+```
+
+# 🛠 Usage
+
+### 1. Set Baseline  
+Save a reference image:
+
+```bash
+python -m visualguard set-baseline baseline.png home_page
+```
+
+### 2. Run Tests  
+Compare a new screenshot against the baseline:
+
+```bash
+python -m visualguard test new_page.png home_page
+```
+
+### 3. Generate Report  
+Create an HTML report with detected bugs:
+
+```bash
+python -m visualguard generate-report
+```
+
+# 📄 Sample Output
+
+🐞 **Bug Report** - Apr 15, 2025  
+```markdown
+--------------------------------  
+🟠 **Bug #1**: Contrast Error  
+   - Element: "Login Button"  
+   - Severity: High (WCAG Fail)  
+   - Diff: [screenshot_diff.png]  
+
+🔵 **Bug #2**: Layout Shift  
+   - Element: Navigation Bar  
+   - Severity: Medium  
+   - Expected: 150px padding (Actual: 90px)  
+```
+
+# 🤖 How the AI Works  
+
+The AI module:  
+- Detects visual differences using OpenCV  
+- Sends affected regions to GPT-4 Vision for semantic classification  
+- Suggests fixes (e.g., “Increase text contrast to 4.5:1”)
+
+# 🛡️ Why Choose VisualGuard QA?
+
+| Feature           | VisualGuard QA | Percy   | Applitools |
+|------------------|----------------|---------|------------|
+| Privacy          | ✅ Local       | ❌ Cloud| ❌ Cloud   |
+| Cost             | Free           | $$$     | $$$$       |
+| Customization    | Full           | Limited | Limited    |
+| Contextual AI    | ✅ GPT-4       | ❌      | 🟡 Basic   |
+
+## 📈 Roadmap  
+- GitHub Actions integration  
+- PDF/Excel report support
+
+# 🤝 Contributing  
+PRs are welcome!  
+Follow these steps:
+
+1. Fork the repo  
+2. Create a new branch: `git checkout -b feature/new-algorithm`  
+3. Commit your changes: `git commit -m "Add magic"`  
+4. Push your branch: `git push origin feature/new-algorithm`
+
+# 📜 License  
+MIT © Daniel Martínez
+
+## 🛡️ Questions? Open an issue  
+
+✨ *Catch visual bugs before they catch your users!* ✨
+
+## 🔗 Useful Links  
+Built with Python 🐍, OpenCV 👁️, and GPT-4 🧠.  
+
+Want a custom logo or live demo? Open an issue! 🎨  
+
+_(This README was crafted with ❤️ by the VisualGuard QA team a.k.a. Daniel Martínez.)_
+
+# Thanks for using VisualGuard QA! 🎉
+
+---------------------------------------------------------------------------------------------
+
 # VisualGuard QA 🛡️🔍
 AI-Powered Visual Testing Tool · Catch UI bugs before your users do
 
